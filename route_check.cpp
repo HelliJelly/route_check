@@ -8,8 +8,6 @@
 #include <exception>
 #include <sstream>
 
-
-
 void check_matrix_size(std::vector<std::vector<int>> matrix)
 {
     if (matrix.size() < 2)
@@ -56,6 +54,7 @@ bool route_check(std::vector<std::vector<int>> matrix)
 {
 
     check_matrix_size(matrix);
+    check_matrix_data(matrix);
 
     int N = matrix.size();
 
@@ -93,4 +92,3 @@ bool route_check(std::vector<std::vector<int>> matrix)
     }
     return false;
 }
-

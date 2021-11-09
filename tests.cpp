@@ -232,9 +232,9 @@ TEST(check_matrix_size, min_size)
 }
 
 TEST(check_matrix_size, max_size)
-{   std::vector<std::vector<int>> Route(51, std::vector<int>(51, 1));
-    EXPECT_THROW(check_matrix_size(Route), std::logic_error);   
-        
+{
+    std::vector<std::vector<int>> Route(51, std::vector<int>(51, 1));
+    EXPECT_THROW(check_matrix_size(Route), std::logic_error);
 }
 
 TEST(check_matrix_size, square_matrix)
