@@ -8,7 +8,7 @@
 #include <exception>
 #include <sstream>
 
-void check_matrix_size(std::vector<std::vector<int>> matrix)
+void check_matrix_size(std::vector<std::vector<int>> const &matrix)
 {
     if (matrix.size() < 2)
     {
@@ -37,8 +37,8 @@ void check_matrix_data(std::vector<std::vector<int>> const &matrix)
     for (int i = 0; i < matrix.size(); i++)
     {
         for (int j = 0; j < matrix.size(); j++)
-            if (matrix[i][j] != 1 || matrix[i][j] != 0)
-                throw std::logic_error("Wrong data format");
+            if (matrix[i][j] != 1 && matrix[i][j] != 0)
+                throw std::logic_error("Wrong data format " + std::to_string(matrix[i][j]));
     }
 }
 

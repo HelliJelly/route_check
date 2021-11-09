@@ -8,13 +8,9 @@ TEST(route_check, Route_1)
         {0, 1, 0, 1, 0},
         {1, 1, 0, 1, 1},
         {1, 0, 1, 0, 0},
-        {1, 1, 1, 1, 1}};
-    if (route_check(Route_1))
-        std::cout << "Route_1 exists." << std::endl;
-    else
-        std::cout << "Route_1 does not exist." << std::endl;
+        {1, 1, 1, 1, 1}};    
 
-    EXPECT_EQ(route_check(Route_1), 1);
+    EXPECT_TRUE(route_check(Route_1));
 }
 
 TEST(route_check, Route_2)
@@ -26,12 +22,9 @@ TEST(route_check, Route_2)
         {1, 1, 1, 1, 1},
         {1, 1, 1, 1, 1}};
 
-    if (route_check(Route_2))
-        std::cout << "Route_2 exists." << std::endl;
-    else
-        std::cout << "Route_2 does not exist." << std::endl;
+    
 
-    EXPECT_EQ(route_check(Route_2), 1);
+    EXPECT_TRUE(route_check(Route_2));
 }
 TEST(route_check, Route_3)
 {
@@ -40,14 +33,9 @@ TEST(route_check, Route_3)
         {1, 1, 1, 1, 1},
         {1, 1, 1, 1, 1},
         {1, 1, 1, 1, 1},
-        {0, 0, 0, 0, 0}};
+        {0, 0, 0, 0, 0}};    
 
-    if (route_check(Route_3))
-        std::cout << "Route_3 exists." << std::endl;
-    else
-        std::cout << "Route_3 does not exist." << std::endl;
-
-    EXPECT_EQ(route_check(Route_3), 0);
+    EXPECT_FALSE(route_check(Route_3));
 }
 
 TEST(route_check, Route_4)
@@ -57,14 +45,9 @@ TEST(route_check, Route_4)
         {1, 0, 1, 1, 1},
         {0, 1, 1, 1, 0},
         {0, 0, 1, 1, 1},
-        {0, 0, 0, 1, 0}};
+        {0, 0, 0, 1, 0}};   
 
-    if (route_check(Route_4))
-        std::cout << "Route_4 exists." << std::endl;
-    else
-        std::cout << "Route_4 does not exist." << std::endl;
-
-    EXPECT_EQ(route_check(Route_4), 0);
+    EXPECT_FALSE(route_check(Route_4));
 }
 
 TEST(route_check, Route_5)
@@ -76,12 +59,9 @@ TEST(route_check, Route_5)
         {0, 0, 1, 1, 1},
         {0, 0, 0, 1, 1}};
 
-    if (route_check(Route_5))
-        std::cout << "Route_5 exists." << std::endl;
-    else
-        std::cout << "Route_5 does not exist." << std::endl;
+   
 
-    EXPECT_EQ(route_check(Route_5), 1);
+    EXPECT_TRUE(route_check(Route_5));
 }
 TEST(route_check, Route_6)
 {
@@ -90,14 +70,9 @@ TEST(route_check, Route_6)
         {0, 1, 0, 0, 0},
         {0, 0, 1, 0, 0},
         {0, 0, 0, 1, 0},
-        {0, 0, 0, 0, 1}};
+        {0, 0, 0, 0, 1}};    
 
-    if (route_check(Route_6))
-        std::cout << "Route_6 exists." << std::endl;
-    else
-        std::cout << "Route_6 does not exist." << std::endl;
-
-    EXPECT_EQ(route_check(Route_6), 0);
+    EXPECT_FALSE(route_check(Route_6));
 }
 
 TEST(route_check, Route_7)
@@ -107,14 +82,9 @@ TEST(route_check, Route_7)
         {0, 1, 0, 0, 0},
         {0, 1, 1, 0, 0},
         {0, 0, 1, 1, 0},
-        {0, 0, 0, 1, 1}};
+        {0, 0, 0, 1, 1}};    
 
-    if (route_check(Route_7))
-        std::cout << "Route_7 exists." << std::endl;
-    else
-        std::cout << "Route_7 does not exist." << std::endl;
-
-    EXPECT_EQ(route_check(Route_7), 1);
+    EXPECT_TRUE(route_check(Route_7));
 }
 TEST(route_check, Route_8)
 {
@@ -125,12 +95,7 @@ TEST(route_check, Route_8)
         {0, 0, 1, 1, 0},
         {0, 0, 0, 1, 0}};
 
-    if (route_check(Route_8))
-        std::cout << "Route_8 exists." << std::endl;
-    else
-        std::cout << "Route_8 does not exist." << std::endl;
-
-    EXPECT_EQ(route_check(Route_8), 0);
+    EXPECT_FALSE(route_check(Route_8));
 }
 
 TEST(route_check, Route_9)
@@ -142,12 +107,9 @@ TEST(route_check, Route_9)
         {0, 0, 1, 1, 0},
         {0, 0, 0, 1, 1}};
 
-    if (route_check(Route_9))
-        std::cout << "Route_9 exists." << std::endl;
-    else
-        std::cout << "Route_9 does not exist." << std::endl;
+    
 
-    EXPECT_EQ(route_check(Route_9), 0);
+    EXPECT_FALSE(route_check(Route_9));
 }
 TEST(route_check, Route_10)
 {
@@ -156,14 +118,9 @@ TEST(route_check, Route_10)
         {1, 0, 0, 0, 1},
         {1, 0, 1, 0, 1},
         {1, 0, 0, 0, 1},
-        {1, 1, 1, 1, 1}};
+        {1, 1, 1, 1, 1}};    
 
-    if (route_check(Route_10))
-        std::cout << "Route_10 exists." << std::endl;
-    else
-        std::cout << "Route_10 does not exist." << std::endl;
-
-    EXPECT_EQ(route_check(Route_10), 1);
+    EXPECT_TRUE(route_check(Route_10));
 }
 TEST(route_check, Route_11)
 {
@@ -173,13 +130,8 @@ TEST(route_check, Route_11)
         {0, 0, 1, 0, 0},
         {0, 1, 0, 1, 0},
         {1, 0, 0, 0, 1}};
-
-    if (route_check(Route_11))
-        std::cout << "Route_11 exists." << std::endl;
-    else
-        std::cout << "Route_11 does not exist." << std::endl;
-
-    EXPECT_EQ(route_check(Route_11), 0);
+   
+    EXPECT_FALSE(route_check(Route_11));
 }
 
 TEST(route_check, Route_12)
@@ -196,12 +148,9 @@ TEST(route_check, Route_12)
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
         {1, 1, 1, 1, 1, 1, 1, 1, 0, 1}};
 
-    if (route_check(Route_12))
-        std::cout << "Route_12 exists." << std::endl;
-    else
-        std::cout << "Route_12 does not exist." << std::endl;
+   
 
-    EXPECT_EQ(route_check(Route_12), 1);
+    EXPECT_TRUE(route_check(Route_12));
 }
 TEST(route_check, Route_13)
 {
@@ -217,12 +166,8 @@ TEST(route_check, Route_13)
         {1, 1, 1, 1, 1, 1, 1, 1, 0, 1},
         {1, 1, 1, 1, 1, 1, 1, 1, 0, 1}};
 
-    if (route_check(Route_13))
-        std::cout << "Route_13 exists." << std::endl;
-    else
-        std::cout << "Route_13 does not exist." << std::endl;
-
-    EXPECT_EQ(route_check(Route_13), 0);
+    
+    EXPECT_FALSE(route_check(Route_13));
 }
 
 TEST(check_matrix_size, min_size)
